@@ -1,0 +1,31 @@
+body {
+    background-image: url('/static/imagens/wallpaper-ideia3.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%; /* Garante que a imagem cubra toda a altura da viewport */
+    color: white;
+}
+
+.vertical-center {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    max-width: 400px; /* Largura máxima do card */
+    width: auto; /* Largura automática */
+}
+
+.card-body {
+    background-color: rgb(47, 207, 7);
+    color: white;
+    text-align: justify;
+}
+
+.card-img-top {
+    width: 100%; /* Garante que a imagem ocupe toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+}

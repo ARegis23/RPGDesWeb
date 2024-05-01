@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href ="\static\css\logins.css">
+
+<div class="login">
+
+    <form method="POST">
+
+        {% if erro %}
+        <div class="alert alert-danger" role="alert">
+            <p>{{ erro }}</p>
+        </div>
+        {% endif %}
+
+        <h2>Login</h2>
+    
+        <label for="email"> Email </label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="senha"> Senha </label><br>
+        <input type="password" id="senha" name="senha" required><br>
+        
+        <button type="submit"> Login </button>
+        
+        <a href="javascript:abrirEsqueceuSenhaPopup()"> Esqueceu a senha? </a>
+
+    </form>
+
+
+
+</div>
+
+<script>
+    // Função para abrir a página de esquecimento de senha como uma pop-up
+    function abrirEsqueceuSenhaPopup() {
+        var esqueceuSenhaURL = "/esqueceu_senha";
+        var popupWindow = window.open(esqueceuSenhaURL, "_blank", "width=600,height=400");
+        if (window.focus) {
+            popupWindow.focus();
+        }
+    }
+</script>
+
+{% endblock %}

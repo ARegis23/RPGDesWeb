@@ -1,0 +1,30 @@
+body {
+    background-image: url('/static/imagens/wallpaper-ideia3.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%; /* Garante que a imagem cubra toda a altura da viewport */
+}
+
+.d20{
+    display: block; 
+    width: 30%; 
+    height: auto;
+    margin-top: 100px;
+    margin-left: 35%;
+}
+
+img{
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+img:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 1s all
+}
+
+.ad20{
+    text-decoration: none;
+    cursor: auto;
+}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href ="\static\css\sobre.css">
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container vertical-center">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <img src="\static\imagens\entrard20.png" class="card-img-top" alt="...">
+                  <h5 class="card-title"> O que é RPG? </h5>
+                  <p class="card-text"> Role-playing game, também conhecido como RPG, é um tipo de jogo em que os jogadores assumem papéis de personagens e criam narrativas colaborativamente. O progresso de um jogo se dá de acordo com um sistema de regras predeterminado, dentro das quais os jogadores podem improvisar livremente. </p>
+                </div>
+              </div>
+              <!-- Adicione mais cards aqui se necessário -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container vertical-center">
+            <div class="card-deck">
+              <div class="card">
+                <div class="card-body">
+                  <img src="\static\imagens\personagem.jpg" class="card-img-top" alt="...">
+                  <h5 class="card-title"> Personagem </h5>
+                  <p class="card-text"> Durante o jogo os personagens vivem aventuras que lembram os grandes épicos de nossa literatura e cinema: enfrentam monstros, salvam princesas, desafiam impérios galácticos... Ou não, pois também é possível interpretar vilões e anti-heróis. </p>
+                </div>
+              </div>
+              <!-- Adicione mais cards aqui se necessário -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container vertical-center">
+            <div class="card-deck">
+              <div class="card"> 
+                <div class="card-body">
+                  <img src="\static\imagens\mestre.jpg" class="card-img-top" alt="...">
+                  <h5 class="card-title"> Mestres </h5>
+                  <p class="card-text"> O Mestre de RPG ou Mestre de Jogo é o responsável pela Mesa de RPG. Pois, ele possui vários papéis dentro dessa responsabilidade que assumiu. Porém, não veja com um olhar de peso esse cargo, pois pode ser o mais divertido e talvez recompensador de todos os papéis. </p>
+                </div>
+              </div>
+              <!-- Adicione mais cards aqui se necessário -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+{% endblock %}

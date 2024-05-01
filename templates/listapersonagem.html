@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> RPG - Mesa Teste </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="" rel="stylesheet">
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <a class="navbar-brand" href="#">Taberna do Regis</a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}"> RPG <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('sobre') }}"> Sobre </a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        
+        <div class="container mt-5">
+            <h1 class="mb-4"> Personagens em Jogo </h1>
+            <a href="{{ url_for('editar_personagem', id = 0) }}" class="btn btn-primary mb-3"> Cadastrar Novo Personagem </a>
+            <table class = "table">
+                <thead>
+                    <tr>
+                        <th> ID </th>
+                        <th> Usuário </th>
+                        <th> Personagem </th>
+                        <th> Origem </th>
+                        <th> Level </th>
+                        <th> Vida </th>
+                        <th> Dinheiro </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if dados %}
+                        {% for id, usuario, personagem, origem, level, vida, dinheiro in dados %}
+                            <tr>
+                                <td> {{ id }} </td>
+                                <td> {{ usuario }} </td>
+                                <td> {{ personagem }} </td>
+                                <td> {{ origem }} </td>
+                                <td> {{ level }} </td>
+                                <td> {{ vida }} </td>
+                                <td> {{ dinheiro }} </td>
+                                <td> <a href="{{ url_for('editar_personagem', id = id) }}"> Editar </a> </td>
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="8">Nenhum personagem encontrado</td>
+                        </tr>
+                    {% endif %}                       
+                </tbody>
+            </table>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

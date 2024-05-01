@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Cadastro de Pessonagem </title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container mt-5">
+            <h1 class="mb-4"> Cadastro de Personagem </h1>
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="id"> ID </label>
+                    <input type="text" class="form-control" id="id" name="id" value="{{ id }}"  readonly>
+                </div>                
+                <div class="form-group">
+                    <label for="usuario"> Usuário </label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" value="{{ usuario }}"  required>
+                </div>
+                <div class="form-group">
+                    <label for="personagem"> Personagem </label>
+                    <input type="text" class="form-control" id="personagem" name="personagem" value="{{ personagem }}"  required>
+                </div>
+                <div class="form-group">
+                    <label for="origem"> Origem </label>
+                    <select class="form-control" id="origem" name="origem" {% if not origem %} required {% endif %}>
+                        {% if not origem %}
+                            <option disabled selected>-----Reino de Origem-----</option>
+                        {% endif %}
+                        <option value="Imperial" {% if origem == 'Imperial' %} selected {% endif %}>Imperial</option>
+                        <option value="Rhodoks" {% if origem == 'Rhodoks' %} selected {% endif %}>Rhodoks</option>
+                        <option value="Nordicos" {% if origem == 'Nordicos' %} selected {% endif %}>Nórdicos</option>
+                        <option value="Extremo Norte" {% if origem == 'Extremo Norte' %} selected {% endif %}>Extremo Norte</option>
+                        <option value="Khergits" {% if origem == 'Khergits' %} selected {% endif %}>Khergits</option>
+                        <option value="Sarranids" {% if origem == 'Sarranids' %} selected {% endif %}>Sarranids</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="level"> Level </label>
+                    <input type="number" class="form-control" id="level" name="level" value="{{ level }}"  required>
+                </div>
+                <div class="form-group">
+                    <label for="vida"> Vida </label>
+                    <input type="number" class="form-control" id="vida" name="vida" value="{{ vida }}"  required>
+                </div>
+                <div class="form-group">
+                    <label for="dinheiro"> Dinheiro </label>
+                    <input type="number" class="form-control" id="number" name="dinheiro" value="{{ dinheiro }}"  required>
+                </div>
+                
+                <input type = "submit" class = "btn btn-primary" name = "salvar" value = "salvar">
+
+                <a href = "{{ url_for('lista') }}" class = "btn btn-secondary"> Cancelar </a>
+
+                <input type = "submit" class = "btn btn-danger" name = "excluir" value = "excluir">
+
+            </form>
+        </div>
+    </body>
+</html>

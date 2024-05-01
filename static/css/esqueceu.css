@@ -1,0 +1,11 @@
+body {
+    background-image: url('/static/imagens/wallpaper-ideia4.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%; /* Garante que a imagem cubra toda a altura da viewport */
+}
+
+h2{
+    color: antiquewhite;
+}

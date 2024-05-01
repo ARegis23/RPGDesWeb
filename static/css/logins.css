@@ -1,0 +1,54 @@
+body {
+    background-image: url('/static/imagens/wallpaper-ideia3.jpg');
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
+    background-position: center; /* Centraliza a imagem no corpo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    height: 100%; /* Garante que a imagem cubra toda a altura da viewport */
+    color: antiquewhite;
+}
+
+h2{
+    color: rgb(240, 218, 20);
+}
+
+
+.login{
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Define a altura do formulário para ocupar toda a altura da viewport */
+}
+
+a{
+    color: rgb(240, 218, 20);
+    text-decoration: none;
+}
+
+label {
+    color: rgb(240, 218, 20);
+    font-size: 25px;
+}
+
+input[type="email"],
+input[type="password"],
+button  {
+    width: 300px;
+    font-size: 20px;
+    color: rgb(240, 218, 20);
+    background-color: #0b8b06;
+    cursor: auto;
+}
+
+button {
+    font-size: 30px;
+}
+
+button:hover{
+cursor: pointer  
+}
