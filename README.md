@@ -4,7 +4,9 @@ RPGDesWeb/
 |
 |__ main.py
 |__ repositorio.py
+|
 |-- _pyache_/
+|
 |-- static/
 |   |--css/
 |   |   |__ esqueceu.css
@@ -12,8 +14,6 @@ RPGDesWeb/
 |   |   |__ sobre.css
 |   |   |__ style1.css
 |   |--imagens/
-|   |   |__ esqueceu.css
-|   |--js/
 |   |   |__ entrard20.png
 |   |   |__ imagem-pagmesas-ideia1.jpg
 |   |   |__ mestre.jpg
@@ -22,6 +22,8 @@ RPGDesWeb/
 |   |   |__ wallpaper-ideia2.jpeg
 |   |   |__ wallpaper-ideia3.jpeg
 |   |   |__ wallpaper-ideia4.jpeg
+|   |--js/
+|   |   |__ scripts.js
 |
 |-- templates/
 |   |__ base.html
@@ -34,4 +36,5 @@ RPGDesWeb/
 |
 |__login.bd
 |__RPG.bd
+|
 |__ README.md
